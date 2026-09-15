@@ -12,10 +12,21 @@ public class MoviesController : Controller
         _context = context;
     }
 
+    /* Test public IActionResult Index()
+     * The notUsed parameter is used to create an overload for the Index method
+    [HttpPost]
+    public string Index(string searchString, bool notUsed)
+    {
+        return "From [HttpPost]Index: filter on " + searchString;
+    }*/
+
     // GET: MOVIES
+
     public async Task<IActionResult> Index(string searchString)
     //public async Task<IActionResult> Index(string id)
     {
+       
+
         if (_context.Movie == null)
         {
             return Problem("Entity set 'MvcMovieContext.Movie'  is null.");
