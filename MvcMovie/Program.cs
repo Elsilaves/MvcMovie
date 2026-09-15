@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using MvcMovie.Models;
+using MvcMovie.Models.Seeders;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("MvcMovieContext") ?? throw new InvalidOperationException("Connection string 'MvcMovieContext' not found.");
 
@@ -8,6 +10,13 @@ builder.Services.AddDbContext<MvcMovieContext>(options => options.UseSqlServer(c
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    MovieSeeder.Initalize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
