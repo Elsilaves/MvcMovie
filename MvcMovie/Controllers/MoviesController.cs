@@ -13,7 +13,8 @@ public class MoviesController : Controller
     }
 
     // GET: MOVIES
-    public async Task<IActionResult> Index(string searchString)    
+    public async Task<IActionResult> Index(string searchString)
+    //public async Task<IActionResult> Index(string id)
     {
         if (_context.Movie == null)
         {
@@ -26,10 +27,12 @@ public class MoviesController : Controller
 
         //If the searchString parameter contains a string, the movies query is modified to filter on the value of the search string:
         if (!String.IsNullOrEmpty(searchString))
+        //if (!String.IsNullOrEmpty(id))
         {
-            movies = movies.Where(
+                movies = movies.Where(
                 // Lambda Expression. Lambdas are used in method-based LINQ queries as arguments to standard query operator methods such as the Where method or Contains.
                 s => s.Title!.ToUpper().Contains(searchString.ToUpper())); 
+                //s => s.Title!.ToUpper().Contains(id.ToUpper()));
         }
         //return View(await _context.Movie.ToListAsync());
         return View(await movies.ToListAsync());
