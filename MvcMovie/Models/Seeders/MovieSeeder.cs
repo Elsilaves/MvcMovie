@@ -20,6 +20,7 @@ namespace MvcMovie.Models.Seeders
                         Title = "When Harry Met Sally",
                         ReleaseDate = DateTime.Parse("1989-1-11"),
                         Genre = "Romantic Comedy",
+                        Rating = "R",
                         Price = 7.99M
                     },
                     new Movie
@@ -27,6 +28,7 @@ namespace MvcMovie.Models.Seeders
                         Title = "Ghostbusters ",
                         ReleaseDate = DateTime.Parse("1984-3-13"),
                         Genre = "Comedy",
+                        Rating = "PG",
                         Price = 8.99M
                     },
                     new Movie
@@ -34,6 +36,7 @@ namespace MvcMovie.Models.Seeders
                         Title = "Ghostbusters 2",
                         ReleaseDate = DateTime.Parse("1986-2-23"),
                         Genre = "Comedy",
+                        Rating = "PG",
                         Price = 9.99M
                     },
                     new Movie
@@ -41,6 +44,7 @@ namespace MvcMovie.Models.Seeders
                         Title = "Rio Bravo",
                         ReleaseDate = DateTime.Parse("1959-4-15"),
                         Genre = "Western",
+                        Rating = "PG",
                         Price = 3.99M
                     },
                     new Movie
@@ -48,6 +52,7 @@ namespace MvcMovie.Models.Seeders
                         Title = "The Shawshank Redemption",
                         ReleaseDate = DateTime.Parse("1994-9-23"),
                         Genre = "Drama",
+                        Rating = "R",
                         Price = 10.99M
                     },
                     new Movie
@@ -55,6 +60,7 @@ namespace MvcMovie.Models.Seeders
                         Title = "The Godfather",
                         ReleaseDate = DateTime.Parse("1972-3-24"),
                         Genre = "Crime",
+                        Rating = "R",
                         Price = 12.99M
                     },
                     new Movie
@@ -62,6 +68,7 @@ namespace MvcMovie.Models.Seeders
                         Title = "The Dark Knight",
                         ReleaseDate = DateTime.Parse("2008-7-18"),
                         Genre = "Action",
+                        Rating = "PG-13",
                         Price = 11.99M
                     }
                 );
